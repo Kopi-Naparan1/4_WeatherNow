@@ -1,0 +1,25 @@
+NOV 6
+
+- Do the weatherinfo.js 
+    - Need to export the weather info so that it can be used in the indicator.js
+    
+
+- Do the: extra weather info
+    - Full location address
+    - time (local time) /
+    - country population
+    - city population
+    - 
+
+- Do the weather-location-info
+    - apparent_temperature
+    - UV index
+    - Air pressure (hPa)
+    - visibility
+    - wind_direction_10m
+    - wind_speed_10m
+    - relative_humidity_2m
+    - precipitation_probability
+
+- layout
+    - change the layout . the bottomBlock must be on the right side. so more info can be stored at the bottom and make it more balanced
