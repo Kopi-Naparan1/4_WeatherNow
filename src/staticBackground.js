@@ -43,7 +43,6 @@ export default function() {
                 </div>
             </div>
         </div>
-            
     </main>
 
     <footer class="w-screen mt-2 bg-black-5 h-6 text-white-100">Nyro The Best</footer>

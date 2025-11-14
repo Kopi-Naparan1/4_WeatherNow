@@ -7,6 +7,8 @@ function log(tag, message, ...optional) { console.log(`[${tag}]`, message, ...op
 function warn(tag, message, ...optional) { console.warn(`[${tag}] ⚠️`, message, ...optional); }
 function error(tag, message, ...optional) { console.error(`[${tag}] ❌`, message, ...optional); }
 
+
+
 // ---- Global State ----
 let weatherData = null;
 let country = null;

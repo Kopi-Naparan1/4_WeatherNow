@@ -2,7 +2,7 @@
 import "./style.css";
 import { getCountry, getCountryCode } from "./weatherInfo.js";
 
-const TAG = "countryData.js";
+function fileTag() { return "countryData.js"; }
 const log = (...args) => console.log(`[${TAG}]`, ...args);
 const warn = (...args) => console.warn(`[${TAG}] ⚠️`, ...args);
 const error = (...args) => console.error(`[${TAG}] ❌`, ...args);
@@ -27,7 +27,7 @@ async function getPopulation(country) {
 
   try {
     const res = await fetch(
-      `https://api.api-ninjas.com/v1/population?country=${country}`,
+      `https://api.api-ninjas.com/v1/population?country=${encodeURIComponent(country)}`,
       { headers: { "X-Api-Key": apiKey } }
     );
     if (!res.ok) throw new Error(`[${TAG}] HTTP ${res.status}`);
@@ -52,7 +52,7 @@ async function getCountryInfo(country) {
 
   try {
     const res = await fetch(
-      `https://api.api-ninjas.com/v1/country?name=${country}`,
+      `https://api.api-ninjas.com/v1/country?name=${encodeURIComponent(country)}`,
       { headers: { "X-Api-Key": apiKey } }
     );
 
@@ -219,7 +219,7 @@ export async function returnFormattedTime() {
 }
 
 
-function broadCastTIme(formattedTime) {
+function broadcastTime(formattedTime) {
     const event = new CustomEvent("timeUpdate", { detail: { formattedTime } });
     document.dispatchEvent(event);
     log(fileTag(), "Time update broadcasted:", formattedTime);
@@ -231,5 +231,7 @@ function broadCastTIme(formattedTime) {
 document.addEventListener("weatherUpdate", async ({ detail }) => {
   const { weather, coordinates } = detail;
   await bottomBlock(weather, coordinates);
-  broadCastTIme(returnFormattedTime());
+  const timeString = await returnFormattedTime();
+
+  broadcastTime(timeString);
 });
