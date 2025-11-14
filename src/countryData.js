@@ -231,7 +231,7 @@ function broadcastTime(formattedTime) {
 document.addEventListener("weatherUpdate", async ({ detail }) => {
   const { weather, coordinates } = detail;
   await bottomBlock(weather, coordinates);
-  const timeString = await returnFormattedTime();
+  const timeString = returnFormattedTime();
 
   broadcastTime(timeString);
 });
