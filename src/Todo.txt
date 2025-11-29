@@ -23,3 +23,45 @@ NOV 6
 
 - layout
     - change the layout . the bottomBlock must be on the right side. so more info can be stored at the bottom and make it more balanced
+
+
+
+NOV 15
+
+Do the nav bar
+    - hourly, now, daily
+    - find a way to make the formatting in each better and still have the summary advice
+    - Remember to don't fix every single bug there is. Focus now for the draft
+    - find a way to connect everything so far to a single file (the now) it must be easy to toggle it so find a way to toggle it safely
+    - data in the bottom should be justified in the left side
+
+
+
+Nov 17
+    - do each of the UI of other options
+    - try to find a way to do what you really need to do. To hide and show those UI.
+    - Need 3 hours
+
+
+Nov 20
+    - Add top box feature in the hourly.
+    - make file for the getting the data from the API (weatherManager)
+    - make a flex box row, scrollable in cross axis
+    - make each of those box dynamic, it can show its own svg based on the data. (Gain insights from the indicator)
+        - it is just like an indicator but it is hourly
+
+
+Nov 26
+    - Improve the search bar, make it rounded and colored when pressed or type
+    - Fix the fonts just use One, roboto will suffice. 
+    - Improve the heading, Make it bigger, take-up more space and highlighted
+    - Improve the footer. Make it 2025 | version 
+    - Improve the coloring. Keep in mind to contrast properly.
+    - Improve the design of the scroll wheel
+    - fix the imbalance of the containers, right side is too wide
+
+    
+Nov 27
+    - Add light mode and dark mode menu above
+    - make the svg more responsive to time. Such as the moon and sun
+    - show loading screen or something like that whenver it is fetching the data. Just some animated indicator

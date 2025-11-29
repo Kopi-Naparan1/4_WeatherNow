@@ -1,47 +1,138 @@
 @import "tailwindcss";
 
-@theme {
-  --color-black-0: hsl(0 0% 0%);
-  --color-black-5: hsl(0 0% 5%);
-  --color-black-10: hsl(0 0% 10%);
-  --color-black-15: hsl(0 0% 15%);
-  --color-black-20: hsl(0 0% 20%);
-  --color-black-25: hsl(0 0% 25%);
-  --color-black-30: hsl(0 0% 30%);
-  --color-black-35: hsl(0 0% 35%);
-  --color-black-40: hsl(0 0% 40%);
-  --color-black-45: hsl(0 0% 45%);
-  --color-black-50: hsl(0 0% 50%);
-  --color-black-55: hsl(0 0% 55%);
-  --color-black-60: hsl(0 0% 60%);
-  --color-black-65: hsl(0 0% 65%);
-  --color-black-70: hsl(0 0% 70%);
-  --color-black-75: hsl(0 0% 75%);
-  --color-black-80: hsl(0 0% 80%);
-  --color-black-85: hsl(0 0% 85%);
-  --color-black-90: hsl(0 0% 90%);
-  --color-black-95: hsl(0 0% 95%);
-  --color-black-100: hsl(0 0% 100%);
+body {
+  font-family: "Roboto", sans-serif;
+}
 
-  --color-white-0: hsl(0 0% 0%);
-  --color-white-5: hsl(0 0% 5%);
-  --color-white-10: hsl(0 0% 10%);
-  --color-white-15: hsl(0 0% 15%);
-  --color-white-20: hsl(0 0% 20%);
-  --color-white-25: hsl(0 0% 25%);
-  --color-white-30: hsl(0 0% 30%);
-  --color-white-35: hsl(0 0% 35%);
-  --color-white-40: hsl(0 0% 40%);
-  --color-white-45: hsl(0 0% 45%);
-  --color-white-50: hsl(0 0% 50%);
-  --color-white-55: hsl(0 0% 55%);
-  --color-white-60: hsl(0 0% 60%);
-  --color-white-65: hsl(0 0% 65%);
-  --color-white-70: hsl(0 0% 70%);
-  --color-white-75: hsl(0 0% 75%);
-  --color-white-80: hsl(0 0% 80%);
-  --color-white-85: hsl(0 0% 85%);
-  --color-white-90: hsl(0 0% 90%);
-  --color-white-95: hsl(0 0% 95%);
-  --color-white-100: hsl(0 0% 100%);
+.view-pane {
+  display: none;
+}
+
+/* Switch container */
+.switch {
+  width: 50px;
+  height: 26px;
+  background: #aaa;
+  border-radius: 9999px;
+  position: relative;
+  cursor: pointer;
+  padding: 3px;
+  transition: background 0.2s ease;
+}
+
+/* Knob */
+.switch .knob {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 9999px;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  transition: transform 0.2s ease;
+}
+
+/* Light mode (switch on) */
+.lights .switch {
+  background: #333;
+}
+
+.lights .switch .knob {
+  transform: translateX(24px);
+}
+
+/* Tailwind v4 CSS-first theme */
+@theme {
+  /* Inverted Black shades (backgrounds) */
+  --color-black-0: hsl(0, 0%, 100%);
+  --color-black-5: hsl(0, 0%, 95%);
+  --color-black-10: hsl(0, 0%, 90%);
+  --color-black-15: hsl(0, 0%, 85%);
+  --color-black-20: hsl(0, 0%, 80%);
+  --color-black-25: hsl(0, 0%, 75%);
+  --color-black-30: hsl(0, 0%, 70%);
+  --color-black-35: hsl(0, 0%, 65%);
+  --color-black-40: hsl(0, 0%, 60%);
+  --color-black-45: hsl(0, 0%, 55%);
+  --color-black-50: hsl(0, 0%, 50%);
+  --color-black-55: hsl(0, 0%, 45%);
+  --color-black-60: hsl(0, 0%, 40%);
+  --color-black-65: hsl(0, 0%, 35%);
+  --color-black-70: hsl(0, 0%, 30%);
+  --color-black-75: hsl(0, 0%, 25%);
+  --color-black-80: hsl(0, 0%, 20%);
+  --color-black-85: hsl(0, 0%, 15%);
+  --color-black-90: hsl(0, 0%, 10%);
+  --color-black-95: hsl(0, 0%, 5%);
+  --color-black-100: hsl(0, 0%, 0%);
+
+  /* Inverted White shades (text) */
+  --color-white-0: hsl(0, 0%, 0%);
+  --color-white-5: hsl(0, 0%, 0%);
+  --color-white-10: hsl(0, 0%, 10%);
+  --color-white-15: hsl(0, 0%, 10%);
+  --color-white-20: hsl(0, 0%, 20%);
+  --color-white-25: hsl(0, 0%, 20%);
+  --color-white-30: hsl(0, 0%, 30%);
+  --color-white-35: hsl(0, 0%, 30%);
+  --color-white-40: hsl(0, 0%, 40%);
+  --color-white-45: hsl(0, 0%, 40%);
+  --color-white-50: hsl(0, 0%, 50%);
+  --color-white-55: hsl(0, 0%, 50%);
+  --color-white-60: hsl(0, 0%, 60%);
+  --color-white-65: hsl(0, 0%, 60%);
+  --color-white-70: hsl(0, 0%, 70%);
+  --color-white-75: hsl(0, 0%, 70%);
+  --color-white-80: hsl(0, 0%, 80%);
+  --color-white-85: hsl(0, 0%, 80%);
+  --color-white-90: hsl(0, 0%, 90%);
+  --color-white-95: hsl(0, 0%, 90%);
+  --color-white-100: hsl(0, 0%, 100%);
+}
+
+/* Dark mode overrides (optional, can invert again for dark theme) */
+.lights {
+  --color-black-0: hsl(0, 0%, 0%);
+  --color-black-5: hsl(0, 0%, 5%);
+  --color-black-10: hsl(0, 0%, 10%);
+  --color-black-15: hsl(0, 0%, 15%);
+  --color-black-20: hsl(0, 0%, 20%);
+  --color-black-25: hsl(0, 0%, 25%);
+  --color-black-30: hsl(0, 0%, 30%);
+  --color-black-35: hsl(0, 0%, 35%);
+  --color-black-40: hsl(0, 0%, 40%);
+  --color-black-45: hsl(0, 0%, 45%);
+  --color-black-50: hsl(0, 0%, 50%);
+  --color-black-55: hsl(0, 0%, 55%);
+  --color-black-60: hsl(0, 0%, 60%);
+  --color-black-65: hsl(0, 0%, 65%);
+  --color-black-70: hsl(0, 0%, 60%);
+  --color-black-75: hsl(0, 0%, 75%);
+  --color-black-80: hsl(0, 0%, 70%);
+  --color-black-85: hsl(0, 0%, 60%);
+  --color-black-90: hsl(0, 0%, 55%);
+  --color-black-95: hsl(0, 0%, 95%);
+  --color-black-100: hsl(0, 0%, 70%);
+
+  --color-white-0: hsl(0, 0%, 100%);
+  --color-white-5: hsl(0, 0%, 100%);
+  --color-white-10: hsl(0, 0%, 90%);
+  --color-white-15: hsl(0, 0%, 90%);
+  --color-white-20: hsl(0, 0%, 80%);
+  --color-white-25: hsl(0, 0%, 80%);
+  --color-white-30: hsl(0, 0%, 70%);
+  --color-white-35: hsl(0, 0%, 70%);
+  --color-white-40: hsl(0, 0%, 60%);
+  --color-white-45: hsl(0, 0%, 60%);
+  --color-white-50: hsl(0, 0%, 50%);
+  --color-white-55: hsl(0, 0%, 50%);
+  --color-white-60: hsl(0, 0%, 40%);
+  --color-white-65: hsl(0, 0%, 40%);
+  --color-white-70: hsl(0, 0%, 30%);
+  --color-white-75: hsl(0, 0%, 30%);
+  --color-white-80: hsl(0, 0%, 20%);
+  --color-white-85: hsl(0, 0%, 20%);
+  --color-white-90: hsl(0, 0%, 10%);
+  --color-white-95: hsl(0, 0%, 10%);
+  --color-white-100: hsl(0, 0%, 0%);
 }
